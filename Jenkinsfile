@@ -8,15 +8,8 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'python3 tester.py'
+        sh 'python3 hello.py'
       }
     }
   }
-  post {
-    success {
-      echo 'This jenkins pipeline was successful'
-    }
-    failure {
-      echo 'This jenkins pipeline failed'
-    }
 }
