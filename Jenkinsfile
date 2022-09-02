@@ -12,4 +12,12 @@ pipeline {
       }
     }
   }
+  post {
+    success {
+      echo 'This jenkins pipeline was successful'
+    }
+    failure {
+      echo 'This jenkins pipeline failed'
+    }
+  }
 }
