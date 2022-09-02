@@ -11,6 +11,11 @@ pipeline {
         sh 'python3 tester.py'
       }
     }
+    stage('Sanity check') {
+            steps {
+                input "Does the input function work?"
+            }
+        }
   }
   post {
     success {
